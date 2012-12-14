@@ -1,0 +1,30 @@
+<head>
+  <title>all-docs</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span10 offset2">
+        {{> menu}}
+      </div>
+      <div class="span12">
+        {{> frame}}
+        </iframe>
+      </div>
+    </div>
+  </div>
+</body>
+
+<template name="frame">
+  <iframe id="frame" src={{page}}>
+  </iframe>
+</template>
+
+<template name="menu">
+  <ul class="nav nav-pills">
+    {{#each sites}}
+    <li><a>{{name}}</a></li>
+    {{/each}}
+  </ul>
+</template>
